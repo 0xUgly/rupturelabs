@@ -3,23 +3,26 @@
 import React, { useState, useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
+
+type ButtonName = 'home' | 'about' | 'docs' | 'team' | 'socials';
+
 export default function Footer() {
     const router = useRouter();
     const pathname = usePathname();
-    const [activeButton, setActiveButton] = useState('home');
-    const buttons = ['home', 'about', 'docs', 'team', 'socials'];
+    const [activeButton, setActiveButton] = useState<ButtonName>('home');
+    const buttons: ButtonName[] = ['home', 'about', 'docs', 'team', 'socials'];
 
     useEffect(() => {
-        const path = pathname?.substring(1) || 'home';
+        const path = (pathname?.substring(1) || 'home') as ButtonName;
         setActiveButton(path);
     }, [pathname]);
 
-    const handleNavigation = (newButton:any) => {
+    const handleNavigation = (newButton: ButtonName) => {
         setActiveButton(newButton);
         router.push(newButton === 'home' ? '/' : `/${newButton}`);
     };
 
-    const handleArrowClick = (direction:any) => {
+    const handleArrowClick = (direction: 'left' | 'right') => {
         const currentIndex = buttons.indexOf(activeButton);
         let newIndex;
         if (direction === 'left') {
@@ -41,10 +44,10 @@ export default function Footer() {
                         <Image
                             className='h-[30px]'
                             src='/shapes/leftarrow.svg'
-                            alt=''
+                            alt='Left arrow'
                             height={20}
                             width={20}
-                            />
+                        />
                     </div>
                     {buttons.map((button) => (
                         <div 
@@ -52,21 +55,20 @@ export default function Footer() {
                             className={`${activeButton === button ? 'text-green-400' : 'text-white'} cursor-pointer`}
                             onClick={() => handleNavigation(button)}
                         >
-                            {button.toUpperCase() }
+                            {button.toUpperCase()}
                         </div>
                     ))}
                     <div 
                         className='bg-white text-black pl-2 pr-2 rounded-sm flex items-center justify-center cursor-pointer'
                         onClick={() => handleArrowClick('right')}
                     >
-                        <div> <Image
+                        <Image
                             className='h-[30px]'
                             src='/shapes/rightarrow.svg'
-                            alt=''
+                            alt='Right arrow'
                             height={20}
                             width={20}
-                            />
-                            </div>
+                        />
                     </div>
                 </div>
                 <div className='flex items-center'>XXXXX</div>

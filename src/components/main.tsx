@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon from './shapeicon'
+
 import Image from 'next/image'
 function Main() {
   return (
