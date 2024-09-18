@@ -52,7 +52,7 @@ export default function Footer() {
                     {buttons.map((button) => (
                         <div 
                             key={button}
-                            className={`${activeButton === button ? 'text-green-400' : 'text-white'} cursor-pointer`}
+                            className={`${activeButton === button ? 'text-green-400' : 'text-white'} cursor-pointer hover:text-green-400`}
                             onClick={() => handleNavigation(button)}
                         >
                             {button.toUpperCase()}
