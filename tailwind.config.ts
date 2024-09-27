@@ -8,6 +8,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        title:["Staatliches", "sans-serif"],
+        raj : ["Rajdhani","sans-serif" ],
+        coder: ['var(--font-coder)'],
+      },
+      
       animation: {
         'spin-slow': 'spin 300s linear infinite',
       },

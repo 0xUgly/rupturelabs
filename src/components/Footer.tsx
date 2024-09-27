@@ -36,7 +36,7 @@ const [hoveredButton, setHoveredButton] = useState<ButtonName | null>(null);
     return (
         <>
          
-        <footer className='h-24 p-5 w-full fixed bottom-0 z-10 bg-black'>
+        <footer className='h-24 p-5 w-full fixed bottom-0 z-10 bg-black font-title text-xl'>
             <div className='flex h-full w-full'>
                 <div className='flex flex-row gap-20 h-full w-full items-center'>
                     <div 
@@ -52,23 +52,40 @@ const [hoveredButton, setHoveredButton] = useState<ButtonName | null>(null);
                         />
                     </div>
                     {buttons.map((button) => (
-                        <div 
-                            key={button}
-                            className={`${activeButton === button ? 'text-green-400' : 'text-white'} cursor-pointer hover:text-green-400 relative p-4 flex items-center justify-center`}
-                            onClick={() => handleNavigation(button)}
+                    <div 
+                        key={button}
+                        className={`relative p-4 flex items-center justify-center group cursor-pointer`}
+                        onClick={() => handleNavigation(button)}
+                    >
+                        <Image
+      className={`absolute bottom-0 transition-opacity duration-300 ${
+        activeButton === button ? 'opacity-0' : 'opacity-0 group-hover:opacity-100'
+      }`}
+      src='/animation/STROKE.gif'
+      alt=''
+      height={200}
+      width={200}
+    />
+    
+    {/* Show the PNG on the active (clicked) button */}
+    <Image
+      className={`absolute bottom-0 transition-opacity duration-300 ${
+        activeButton === button ? 'opacity-100' : 'opacity-0'
+      }`}
+      src='/animation/Stroke.png'
+      alt=''
+      height={200}
+      width={200}
+    />
+                        <span
+                            className={`relative z-10 text-white group-hover:text-green-400 font-title ${
+                                activeButton === button ? 'text-green-400' : ''
+                            } `}
                         >
-                             <Image
-                                className={`absolute bottom-0 transition-opacity duration-300 ${
-                                    activeButton === button ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
-                                }`}
-                                src='/animation/STROKE.gif'
-                                alt=''
-                                height={200}
-                                width={200}
-                            />
-                            <span className="relative z-10">{button.toUpperCase()}</span>
-                        </div>
-                    ))}
+                            {button.toUpperCase()}
+                        </span>
+                    </div>
+                ))}
                     <div 
                         className='bg-white text-black pl-2 pr-2 rounded-sm flex items-center justify-center cursor-pointer'
                         onClick={() => handleArrowClick('right')}
