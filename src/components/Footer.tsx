@@ -11,7 +11,7 @@ export default function Footer() {
     const pathname = usePathname();
     const [activeButton, setActiveButton] = useState<ButtonName>('home');
     const buttons: ButtonName[] = ['home', 'about', 'docs', 'team', 'socials'];
-const [hoveredButton, setHoveredButton] = useState<ButtonName | null>(null);
+
     useEffect(() => {
         const path = (pathname?.substring(1) || 'home') as ButtonName;
         setActiveButton(path);
