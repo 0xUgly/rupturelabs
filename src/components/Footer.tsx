@@ -4,13 +4,13 @@ import React, { useState, useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
 
-type ButtonName = 'home' | 'about' | 'docs' | 'team' | 'socials';
+type ButtonName = 'home' | 'about' | 'products' | 'team' ;
 
 export default function Footer() {
     const router = useRouter();
     const pathname = usePathname();
     const [activeButton, setActiveButton] = useState<ButtonName>('home');
-    const buttons: ButtonName[] = ['home', 'about', 'docs', 'team', 'socials'];
+    const buttons: ButtonName[] = ['home', 'about', 'products', 'team'];
 
     useEffect(() => {
         const path = (pathname?.substring(1) || 'home') as ButtonName;
@@ -78,7 +78,7 @@ export default function Footer() {
       width={200}
     />
                         <span
-                            className={`relative z-10 text-white group-hover:text-green-400 font-title ${
+                            className={`relative z-50 text-white group-hover:text-green-400 font-title ${
                                 activeButton === button ? 'text-green-400' : ''
                             } `}
                         >
