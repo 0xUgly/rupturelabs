@@ -6,7 +6,7 @@ import { MarqueeDemo } from '@/components/mark'
 import LocomotiveScroll from 'locomotive-scroll';
 import { motion } from "framer-motion"
 
-export default function page() {
+ function About() {
   useEffect(() => {
     const locomotiveScroll = new LocomotiveScroll();
     
@@ -176,3 +176,4 @@ export default function page() {
 
   )
 }
+export default About;

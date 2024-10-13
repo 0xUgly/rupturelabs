@@ -5,7 +5,7 @@ import Image from 'next/image'
 import LocomotiveScroll from 'locomotive-scroll';
 import { motion } from "framer-motion"
 
-export default function page() {
+ function Products() {
   useEffect(() => {
     const locomotiveScroll = new LocomotiveScroll();
     
@@ -122,3 +122,4 @@ export default function page() {
   )
 }
 
+export default Products;
