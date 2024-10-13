@@ -1,10 +1,19 @@
 "use client"
+import { useEffect } from 'react';
 import React from 'react'
 import Image from 'next/image'
 import LocomotiveScroll from 'locomotive-scroll';
 import { motion } from "framer-motion"
-const locomotiveScroll = new LocomotiveScroll();
+
 export default function page() {
+  useEffect(() => {
+    const locomotiveScroll = new LocomotiveScroll();
+    
+    // Clean up function
+    return () => {
+      if (locomotiveScroll) locomotiveScroll.destroy();
+    }
+  }, []);
   return (
     <main>
       <div className='h-screen w-full flex-col'>     

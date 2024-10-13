@@ -1,14 +1,20 @@
 "use client"
 import React from 'react'
+import { useEffect } from 'react'
 import Image from 'next/image'
 import { MarqueeDemo } from '@/components/mark'
 import LocomotiveScroll from 'locomotive-scroll';
 import { motion } from "framer-motion"
-const locomotiveScroll = new LocomotiveScroll();
-
-
 
 export default function page() {
+  useEffect(() => {
+    const locomotiveScroll = new LocomotiveScroll();
+    
+    // Clean up function
+    return () => {
+      if (locomotiveScroll) locomotiveScroll.destroy();
+    }
+  }, []);
   return (
     <main className='h-auto w-auto relative bg-white overflow-hidden'>
   <div className='absolute left-[25%] top-[-25%] transform scale-[2.5]'>
