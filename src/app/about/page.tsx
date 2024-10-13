@@ -8,7 +8,7 @@ const locomotiveScroll = new LocomotiveScroll();
 
 
 
-function page() {
+export default function page() {
   return (
     <main className='h-auto w-auto relative bg-white overflow-hidden'>
   <div className='absolute left-[25%] top-[-25%] transform scale-[2.5]'>
@@ -170,5 +170,3 @@ function page() {
 
   )
 }
-
-export default page

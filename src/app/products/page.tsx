@@ -4,7 +4,7 @@ import Image from 'next/image'
 import LocomotiveScroll from 'locomotive-scroll';
 import { motion } from "framer-motion"
 const locomotiveScroll = new LocomotiveScroll();
-function page() {
+export default function page() {
   return (
     <main>
       <div className='h-screen w-full flex-col'>     
@@ -113,4 +113,3 @@ function page() {
   )
 }
 
-export default page
