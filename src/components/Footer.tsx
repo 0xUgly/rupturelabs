@@ -3,7 +3,9 @@
 import React, { useState, useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
-
+import { FaTwitter } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaDiscord } from "react-icons/fa6";
 type ButtonName = 'home' | 'about' | 'products' | 'team' ;
 
 export default function Footer() {
@@ -99,7 +101,11 @@ export default function Footer() {
                         />
                     </div>
                 </div>
-                <div className='flex items-center'>XXXXX</div>
+                <div className='flex items-center h-full gap-3'>
+                    <div className='cursor-pointer'><FaTwitter size={25}/></div>
+                    <div className='cursor-pointer'><FaDiscord size={25}/></div>
+                    <div className='cursor-pointer'><FaInstagram size={25}/></div>
+                </div>
             </div>
         </footer>
         </>

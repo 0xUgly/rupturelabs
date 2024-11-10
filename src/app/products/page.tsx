@@ -4,7 +4,7 @@ import React from 'react'
 import Image from 'next/image'
 import LocomotiveScroll from 'locomotive-scroll';
 import { motion } from "framer-motion"
-
+import { GameDiscMarquee } from '@/components/marqprod';
  function Products() {
   useEffect(() => {
     const locomotiveScroll = new LocomotiveScroll();
@@ -17,8 +17,7 @@ import { motion } from "framer-motion"
   return (
     <main>
       <div className='h-screen w-full flex-col'>     
-        <motion.div initial={{ opacity: 0, y: 100, }}   transition={{ opacity:{duration:1}, x:{duration:1}, ease: "easeInOut" }}
-        whileInView={{ opacity: 1, y: 0,  }} className='w-full flex  justify-center'>
+        <motion.div  className='w-full flex  justify-center'>
         <Image
         className='w-[563px] h-[49px]'
         src='/dummyfont/PLAY.png'
@@ -29,18 +28,15 @@ import { motion } from "framer-motion"
         </motion.div>
 
         <div className='w-full h-full flex-1 flex items-center justify-center'>
-          <motion.div initial={{ opacity: 0, x: -200, }}   transition={{ opacity:{duration:1}, x:{duration:1}, ease: "easeInOut" }}
-        whileInView={{ opacity: 1, x: 0,  }}  className='font-babes text-[140px]'>EVM<br/> WARFARE</motion.div>
-          <motion.div initial={{ opacity: 0, rotate: -360, scale:0.5 }}   transition={{ opacity:{duration:0.5}, rotate:{duration:1}, ease: "easeInOut" }}
-        whileInView={{ opacity: 1, rotate: 0, scale:1 }} ><Image
-        className='w-[660px] h-[660px]'
-        src='/cd/Cd_EVM4 1.png'
+          <motion.div className='font-babes text-[140px]'>EVM<br/> WARFARE</motion.div>
+          <motion.div className='h-[800px] w-[800px]' ><Image
+        className='w-[781px] h-[671px]'
+        src='/cd/Group 1244831235.png'
         alt=''
-        height={700}
-        width={700}
+        height={800}
+        width={800}
         /></motion.div>
-          <motion.div initial={{ opacity: 0, y: 200, }}   transition={{ opacity:{duration:1}, y:{duration:1}, ease: "easeInOut" }}
-        whileInView={{ opacity: 1, y: 0,  }}  className='font-raj text-[32px] font-medium w-1/4'>First-Person Shooters PC Game : Fast paced action-packed game with blockchain-integrated features - EVM Warfare.</motion.div>
+          <motion.div  className='font-raj text-[32px] font-medium w-1/4'>First-Person Shooters PC Game : Fast paced action-packed game with blockchain-integrated features - EVM Warfare.</motion.div>
         </div>
       </div>
       
@@ -56,36 +52,28 @@ import { motion } from "framer-motion"
           />
         </div>
         <div className='absolute'>
-          <Image
-          className='w-[2610.18px] h-[442.8px]'
-          src='/cd/Group 1244831213.png'
-          alt=''
-          height={3000}
-          width={3000}
-          />
+        <GameDiscMarquee/>
         </div>
       </div>
 
 
       <div className='h-screen w-full flex flex-col items-center justify-center font-babes text-[140px]'>
-        <motion.div initial={{ opacity: 0, y: 100, }}   transition={{ opacity:{duration:1}, x:{duration:1}, ease: "easeInOut" }}
-        whileInView={{ opacity: 1, y: 0,  }} className='text-center'>TELEGRAM<br/> GAMES</motion.div>
-        <motion.div initial={{ opacity: 0, y: 100, }}   transition={{ opacity:{duration:1}, x:{duration:1}, ease: "easeInOut" }}
-        whileInView={{ opacity: 1, y: 0,  }} className=' font-raj w-2/5 text-center text-[36px]'>Rupture Labs Bot – your gateway to fun and exciting mini Web3 games right within Telegram!
+        <motion.div className='text-center'>TELEGRAM<br/> GAMES</motion.div>
+        <motion.div  className=' font-raj w-2/5 text-center text-[36px]'>Rupture Labs Bot – your gateway to fun and exciting mini Web3 games right within Telegram!
         No complicated setups, no downloads—just pure entertainment at your fingertips.
         Ready to start playing? 
         Start the bot -  and let the games begin! </motion.div>
       </div>
 
 
-      <div className=''>
-      <Image
-          className='w-[1716.18px] h-[512.8px]'
-          src='/cd/Frame 1244831224.png'
-          alt=''
-          height={3000}
-          width={3000}
-          />
+      <div className='flex gap-8 w-full items-center justify-center'>
+      <Image src='/cd/sdcard/SD_Card_Mockup copy.png' alt='' height={150} width={150}/>
+      <Image src='/cd/sdcard/SD_P_ChainKnight.png' alt='' height={150} width={150}/>
+      <Image src='/cd/sdcard/SD_P_CityJump.png' alt='' height={150} width={150}/>
+      <Image src='/cd/sdcard/SD_P_CosmicLeap.png' alt='' height={150} width={150}/>
+      <Image src='/cd/sdcard/SD_P_EVM2.png' alt='' height={150} width={150}/>
+      <Image src='/cd/sdcard/SD_P_fruitNINJA.png' alt='' height={150} width={150}/>
+      <Image src='/cd/sdcard/SD_P_Trailblazer.png' alt='' height={150} width={150}/>
       </div>
 
       <div className='min-h-screen flex items-center justify-center'>

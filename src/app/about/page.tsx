@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { MarqueeDemo } from '@/components/mark'
 import LocomotiveScroll from 'locomotive-scroll';
 import { motion } from "framer-motion"
-
+import Component from '@/components/scrollable'
  function About() {
   useEffect(() => {
     const locomotiveScroll = new LocomotiveScroll();
@@ -27,8 +27,7 @@ import { motion } from "framer-motion"
     /> */}
   </div>
   <div className='flex flex-col items-center justify-center h-screen w-full gap-16'>
-    <motion.div initial={{ opacity: 0 }}   transition={{ opacity:{duration:1.5}, x:{duration:0.5}, ease: "easeInOut" }}
-        whileInView={{ opacity: 1}} >
+    <motion.div  >
     <Image
       className=''
       src='/shapes/PLAY.png'
@@ -38,18 +37,14 @@ import { motion } from "framer-motion"
       />
     </motion.div>
   <div className='flex items-center justify-center w-full gap-10 '>
-    <div className='text-black   h-[300px] font-babes  w-auto font-bold text-4xl flex flex-col justify-between items-end'>
-     <motion.div initial={{ opacity: 0, x: -400 }}   transition={{ opacity:{duration:1}, x:{duration:0.5}, ease: "easeInOut" }}
-        whileInView={{ opacity: 1, x: 0 }}   className='inline-block transform  text-[100px] '>WHO</motion.div>
-     <motion.div initial={{ opacity: 0, x: -400 }}   transition={{ opacity:{duration:1}, x:{duration:0.5}, ease: "easeInOut" }}
-        whileInView={{ opacity: 1, x: 0 }}  className='inline-block transform  text-[100px]'>WE</motion.div>
-     <motion.div initial={{ opacity: 0, x: -400 }}   transition={{ opacity:{duration:1}, x:{duration:0.5}, ease: "easeInOut"}}
-        whileInView={{ opacity: 1, x: 0 }}  className='inline-block transform  text-[100px]'>ARE</motion.div>
+    <div className='text-black   h-[400px] font-babes  w-auto font-bold text-4xl flex flex-col justify-between items-end'>
+     <motion.div className='inline-block transform  text-[150px] '>WHO</motion.div>
+     <motion.div className='inline-block transform  text-[150px]'>WE</motion.div>
+     <motion.div className='inline-block transform  text-[150px]'>ARE</motion.div>
     </div>
-    <motion.div initial={{ opacity: 0, y: 100, }}   transition={{ opacity:{duration:1}, y:{duration:1}, ease: "easeInOut" }}
-        whileInView={{ opacity: 1, y: 0,  }} className=' h-[300px] w-1/5 font-medium text-black font-raj text-2xl'>
-    Rupture Labs is an indie gaming studio specializing in Web3 game development. Our passionate team of developers are committed to create an advanced yet entertaining skill based game with an immersive gaming experience across multiple platforms<br/>
-    (PC, WebGL , Telegram mini games and Android) and a wide genre of games.
+    <motion.div  className=' flex-col w-1/5 text-[1.4vw] font-medium text-black font-raj'>
+    Rupture Labs is an indie gaming studio specializing in  <span className="text-[#51FF85]">Web3</span> game development. Our passionate team of developers are committed to create an advanced yet entertaining skill based game with an immersive gaming experience across multiple platforms<br/>
+    (<span className="text-[#51FF85]">PC, WebGL , Telegram mini games and Android</span>) and a wide genre of games.
     </motion.div>
 
   </div>
@@ -64,24 +59,21 @@ import { motion } from "framer-motion"
   </div>
   </div>
   
-  <div  className='h-screen bg-black flex'>
-      <motion.div className='bg-black flex-1 flex items-center justify-center'>
-        <motion.div initial={{ opacity: 0, x: -100 }}   transition={{ x:{duration:3}, ease: "linear", type: "spring", stiffness: 100 }}
-        whileInView={{ opacity: 1, x: 0 }}>
+  <div  className='h-screen bg-black flex items-center justify-center'>
+      <motion.div className='bg-black flex-[1.7] flex items-center justify-center'>
+        <motion.div >
         <Image
-        
-        src='/shapes/Group 1244831194.png'
+        className='h-[60vh]'
+        src='/shapes/BG12.png'
         alt=''
-        width={2416}
-        height={748}
+        width={3000}
+        height={3000}
         />
         </motion.div>
       </motion.div>
       <div className='bg-black flex-1 flex flex-col items-center justify-center p-4'>
-        <motion.div  initial={{ opacity: 0, y: 100 }}   transition={{  ease: "linear", type: "spring", stiffness: 100 }}
-        whileInView={{ opacity: 1, y: 0 }} className=' w-full flex justify-start text-white text-8xl  font-babes items-'>BUILDING THE<br/> FUTURE OF<br/> GAMING</motion.div>
-        <motion.div  initial={{ opacity: 0, y: 100 }}   transition={{  ease: "linear", type: "spring", stiffness: 100 }}
-        whileInView={{ opacity: 1, y: 0 }} className=' w-full font-medium text-white flex  font-raj items-center p-2'>At Rupture Labs, we are building the future of gaming through decentralized IP co-created with the community and innovative products that enrich the 
+        <motion.div  className=' w-full flex justify-start text-white text-8xl  font-babes items-'>BUILDING THE<br/> FUTURE OF<br/> GAMING</motion.div>
+        <motion.div   className=' w-full font-medium text-white flex text-[32px] font-raj items-center p-2'>At Rupture Labs, we are building the future of gaming through decentralized IP co-created with the community and innovative products that enrich<br/> the 
         anime fan experience. Our Azuki collectibles have generated over $1B in secondary trading volume. Here are some things we’ve created so far.</motion.div>
       </div>
   </div>
@@ -89,7 +81,35 @@ import { motion } from "framer-motion"
   <div className='h-screen w-full bg-black'>
       < MarqueeDemo/>
   </div>
-  <div className='h-screen text-black font-babes'>
+  <div className='h-screen text-black font-babes relative'>
+  <div className='left-[35%] top-[-25%] transform scale-[1] absolute'>
+            <Image
+            className='  '
+            src='/shapes/shape_03 1.png'
+            alt=''
+            height={379}
+            width={2266}
+            />
+        </div>
+        <div className='absolute right-5 bottom-10 rotate-180'>
+            <Image
+            className='  '
+            src='/shapes/shapesmal.png'
+            alt=''
+            height={230}
+            width={230}
+            />
+        </div>
+        <div className='absolute right-[200px] bottom-10'>
+            <Image
+            className='  '
+            src='/shapes/shapesmal.png'
+            alt=''
+            height={230}
+            width={230}
+            />
+        </div>
+
     <div className='h-full w-wll relative'>
       <motion.div initial={{ opacity: 0, x: -100 }}   transition={{ opacity:{duration:2}, ease: "linear", type: "spring", stiffness: 100 }}
         whileInView={{ opacity: 1, x: 0 }} className='absolute text-[105px] top-24 left-24'>
@@ -116,44 +136,10 @@ import { motion } from "framer-motion"
     </div>
   </div>
 
-  <div className='h-screen flex'>
-      <div className='w-1/4 h-full bg-white'></div>
-      <div className='flex-1 bg-white flex flex-col p-6'>
-        <motion.div initial={{ opacity: 0, y: 100 }}   transition={{ opacity:{duration:1.5}, ease: "easeInOut", type: "spring", stiffness: 100 }}
-        whileInView={{ opacity: 1, y: 0 }} className='font-babes text-black pt-24 text-[115px] '>ROADMAP</motion.div>
-        <div className='flex flex-col gap-8 '>
-          <div>
-          <div className='font-babes text-black text-[44px] '>
-            <motion.span initial={{ opacity: 0, y: 100 }}   transition={{ opacity:{duration:1.5}, ease: "easeInOut", type: "spring", stiffness: 100 }}
-        whileInView={{ opacity: 1, y: 0 }} className='border-2 border-black rounded-[10px] pl-2 pr-2'>02 2024</motion.span>
-          </div>
-          <motion.div initial={{ opacity: 0, y: 100 }}   transition={{ opacity:{duration:1.5}, ease: "easeInOut", type: "spring", stiffness: 100 }}
-        whileInView={{ opacity: 1, y: 0 }} className='font-babes text-black text-[44px] border-b-2 border-black'>LAUNCH OF MAIN PC GAME</motion.div>
-          </div>
-          <div className=''>
-          <div className='font-babes text-black text-[44px] '>
-            <motion.span initial={{ opacity: 0, y: 100 }}   transition={{ opacity:{duration:1.5}, ease: "easeInOut", type: "spring", stiffness: 100 }}
-        whileInView={{ opacity: 1, y: 0 }} className='border-2 border-black rounded-[10px] pl-2 pr-2'>03 2024</motion.span>
-          </div>
-          <motion.div initial={{ opacity: 0, y: 100 }}   transition={{ opacity:{duration:1.5}, ease: "easeInOut", type: "spring", stiffness: 100 }}
-        whileInView={{ opacity: 1, y: 0 }} className='font-babes text-black text-[44px] border-b-2 border-black'>Release of the first batchWebGL
-          mini-games and Android game</motion.div>
-          </div>
-          <div>
-          <div className='font-babes text-black text-[44px] '>
-            <motion.span initial={{ opacity: 0, y: 100 }}   transition={{ opacity:{duration:1.5}, ease: "easeInOut", type: "spring", stiffness: 100 }}
-        whileInView={{ opacity: 1, y: 0 }} className='border-2 border-black rounded-[10px] pl-2 pr-2'>04 2024</motion.span>
-          </div>
-          <motion.div initial={{ opacity: 0, y: 100 }}   transition={{ opacity:{duration:1.5}, ease: "easeInOut", type: "spring", stiffness: 100 }}
-        whileInView={{ opacity: 1, y: 0 }} className='font-babes text-black text-[44px] border-b-2 border-black'>Integration with additional
-          blockchain networks</motion.div>
-          </div>
-        </div>
-      </div>
-  </div>
+  <Component/>
   <div className='h-screen w-full bg-black'>
       <div className='font-babes text-[145px] pt-24'>STILL<br/> BUILDING!</div>
-      <div className='flex flex-col  items-end p-5 gap-1 '>
+      <div className='flex flex-col mt-24 items-end p-5 gap-1 h-full'>
         <div>
           <Image
             src='/logo/finaleLOgo.png'
