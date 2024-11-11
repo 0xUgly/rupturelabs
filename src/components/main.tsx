@@ -10,7 +10,7 @@ function Main() {
         <div className='h-full w-full flex items-center justify-center'>
         {Showdiv && (
           <Draggable>
-          <div className='bg-white border-2 border-black z-10 h-[231px] w-[586px] absolute flex items-center justify-evenly p-4'>
+          <div className='bg-white z-30 border-2 border-black  h-[231px] w-[586px] absolute flex items-center justify-evenly p-4'>
             <div>
             <Image
             className=''
@@ -25,8 +25,8 @@ function Main() {
               <div>Copyright (c)Rupture Labs Disk Space Free: 19796K Memory Free:   301K</div>
              
             </div>
-            <div onClick={() => SetShowdiv(false)} className='absolute bottom-0 text-black text-center w-full p-4'>
-              <span className='border-2 border-black px-8 rounded-[10px] py-2 cursor-pointer'>OK</span>
+            <div  className='absolute bottom-0 text-black text-center w-full p-4'>
+              <span onClick={() => SetShowdiv(false)} className='border-2 border-black px-8 rounded-[10px] py-2 cursor-pointer'>OK</span>
             </div>
           </div>
           </Draggable>
