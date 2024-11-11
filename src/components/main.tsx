@@ -20,9 +20,9 @@ function Main() {
             width={94}
             />
             </div>
-            <div className='flex-col w-2/4 text-black'>
+            <div className='flex-col w-2/4 text-black items-center justify-center'>
               <div>Welcome To Rupture Labs</div>
-              <div>Copyright (c)Rupture Labs Disk Space Free: 19796K Memory Free:   301K</div>
+              <div>Copyright (c)Rupture Labs<br/> Disk Space Free: 19796K<br/> Memory Free:   301K</div>
              
             </div>
             <div  className='absolute bottom-0 text-black text-center w-full p-4'>
