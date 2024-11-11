@@ -62,7 +62,7 @@ export default function Footer() {
      
     
     {/* Show the PNG on the active (clicked) button */}
-    {/* <Image
+    <Image
       className={`absolute bottom-0 transition-opacity duration-300 ${
         activeButton === button ? 'opacity-100' : 'opacity-0'
       }`}
@@ -70,7 +70,7 @@ export default function Footer() {
       alt=''
       height={200}
       width={200}
-    /> */}
+    />
                         <span
                             className={`relative z-50 text-white group-hover:text-[#7FFF00] font-title ${
                                 activeButton === button ? 'text-[#7FFF00]' : ''
