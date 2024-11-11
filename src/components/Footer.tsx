@@ -59,15 +59,7 @@ export default function Footer() {
                         className={`relative p-4 flex items-center justify-center group cursor-pointer`}
                         onClick={() => handleNavigation(button)}
                     >
-                        <Image
-      className={`absolute bottom-0 transition-opacity duration-300 ${
-        activeButton === button ? 'opacity-0' : 'opacity-0 group-hover:opacity-100'
-      }`}
-      src='/animation/STROKE.gif'
-      alt=''
-      height={200}
-      width={200}
-    />
+     
     
     {/* Show the PNG on the active (clicked) button */}
     <Image
@@ -80,8 +72,8 @@ export default function Footer() {
       width={200}
     />
                         <span
-                            className={`relative z-50 text-white group-hover:text-green-400 font-title ${
-                                activeButton === button ? 'text-green-400' : ''
+                            className={`relative z-50 text-white group-hover:text-[#7FFF00] font-title ${
+                                activeButton === button ? 'text-[#7FFF00]' : ''
                             } `}
                         >
                             {button.toUpperCase()}
