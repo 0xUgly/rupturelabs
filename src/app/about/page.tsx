@@ -73,8 +73,7 @@ import Component from '@/components/scrollable'
       </motion.div>
       <div className='bg-black flex-1 flex flex-col items-center justify-center p-4'>
         <motion.div  className=' w-full flex justify-start text-white text-8xl  font-babes items-'>BUILDING THE<br/> FUTURE OF<br/> GAMING</motion.div>
-        <motion.div   className=' w-full font-medium text-white flex text-[32px] font-raj items-center p-2'>At Rupture Labs, we are building the future of gaming through decentralized IP co-created with the community and innovative products that enrich<br/> the 
-        anime fan experience. Our Azuki collectibles have generated over $1B in secondary trading volume. Here are some things we’ve created so far.</motion.div>
+        <motion.div   className=' w-full font-medium text-white flex text-[26px] font-raj items-center p-2'>At Rupture Labs, we are building the future next generation web3 gaming ecosystem experience with EVM Warfare & fun to play Telegram-based games catering both competitive gamers and casual web3 audience. With a goal to eliminate traditional web3 gaming barriers through account abstraction and gasless transactions, making blockchain gaming accessible on multiple platforms.</motion.div>
       </div>
   </div>
 
