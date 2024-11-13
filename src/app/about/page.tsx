@@ -2,7 +2,7 @@
 import React from 'react'
 import { useEffect } from 'react'
 import Image from 'next/image'
-import { MarqueeDemo } from '@/components/mark'
+import { ImageMarqueeDemo } from '@/components/mark'
 import LocomotiveScroll from 'locomotive-scroll';
 import { motion } from "framer-motion"
 import Component from '@/components/scrollable'
@@ -78,7 +78,7 @@ import Component from '@/components/scrollable'
   </div>
 
   <div className='h-screen w-full bg-black'>
-      < MarqueeDemo/>
+      < ImageMarqueeDemo/>
   </div>
   <div className='h-screen text-black font-babes relative'>
   <div className='left-[35%] top-[-25%] transform scale-[1] absolute'>
