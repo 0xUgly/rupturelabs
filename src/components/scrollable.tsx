@@ -16,7 +16,7 @@ const RoadmapComponent = () => {
     offset: ["start start", "end start"]
   })
 
-  const rotate = useTransform(contentScrollProgress, [0, 1], [0, 360])
+  const rotate = useTransform(contentScrollProgress, [0, 1], [0, -360])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -48,13 +48,15 @@ const RoadmapComponent = () => {
       <div ref={headerRef} className="relative top-0 h-24" />
 
       <div className="w-full flex flex-col lg:flex-row">
-        <div className="w-full lg:w-1/4 relative">
+        <div className="w-full lg:w-1/4 relative flex items-center">
           <motion.div 
             style={{ rotate }}
-            className="absolute z-0 left-[-45%] top-[-25%] hidden lg:block"
+            className="absolute z-0 left-[-70%]  hidden lg:block"
           >
+
             <Image 
-              src="/shapes/vector 5 1.png" 
+            className='scale-[1.9]'
+              src="/shapes/vector 5 1.png " 
               alt="Decorative rotating shape" 
               height={1923} 
               width={1506} 

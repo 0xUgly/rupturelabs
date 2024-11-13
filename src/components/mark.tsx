@@ -5,7 +5,7 @@ const images = Array.from({ length: 22 }, (_, i) => `/Media/${i + 1}.png`);
 
 const ImageCard = ({ src }: { src: string }) => {
   return (
-    <div className="relative w-64 h-64 m-2 overflow-hidden rounded-xl">
+    <div className="relative w-64 h-64 m-2 overflow-hidden rounded-xl z-30">
       <Image
         src={src}
         alt="Gallery image"

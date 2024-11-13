@@ -77,14 +77,14 @@ import Component from '@/components/scrollable'
       </div>
   </div>
 
-  <div className='h-screen w-full bg-black'>
-      < ImageMarqueeDemo/>
+  <div className='h-screen w-full z-30 bg-black'>
+      < ImageMarqueeDemo />
   </div>
-  <div className='h-screen text-black font-babes relative'>
-  <div className='left-[35%] top-[-25%] transform scale-[1] absolute'>
+  <div className='h-screen text-black font-babes z-10 relative'>
+  <div className='right-0 top-0 w-[700px] z-10 transform scale-[1] absolute'>
             <Image
             className='  '
-            src='/shapes/shape_03 1.png'
+            src='/shapes/croppedpartner.png'
             alt=''
             height={379}
             width={2266}
