@@ -55,7 +55,7 @@ const RoadmapComponent = () => {
           >
 
             <Image 
-            className='scale-[1.9]'
+            className=''
               src="/shapes/rotatingwheel.png " 
               alt="Decorative rotating shape" 
               height={1923} 
