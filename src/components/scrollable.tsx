@@ -42,10 +42,10 @@ const RoadmapComponent = () => {
 
   return (
     <div 
-      ref={containerRef}
+      
       className="relative min-h-screen bg-white"
     >
-      <div ref={headerRef} className="relative top-0 h-24" />
+      <div className="relative top-0 h-24" />
 
       <div className="w-full flex flex-col lg:flex-row">
         <div className="w-full lg:w-1/4 relative flex items-center">
@@ -64,14 +64,14 @@ const RoadmapComponent = () => {
           </motion.div>
         </div>
 
-        <div className="flex-1 px-4 lg:px-0 lg:ml-20" ref={contentRef}>
+        <div className="flex-1 px-4 lg:px-0 lg:ml-20">
           <div 
             className={`bg-white z-10 w-full`}
           >
             <h1 className="font-babes text-black text-[48px] sm:text-[72px] lg:text-[115px]">ROADMAP</h1>
           </div>
           
-          {isSticky && <div className="h-[calc(24px+115px+24px)]" />}
+        
 
           <div className="pb-24">
             <div className="flex flex-col gap-8">
