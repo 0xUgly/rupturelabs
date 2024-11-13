@@ -51,7 +51,7 @@ const RoadmapComponent = () => {
         <div className="w-full lg:w-1/4 relative flex items-center">
           <motion.div 
             style={{ rotate }}
-            className="absolute z-0 left-[-70%]  hidden lg:block"
+            className="absolute  left-[-70%] z-30 hidden lg:block"
           >
 
             <Image 
