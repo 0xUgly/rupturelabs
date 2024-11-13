@@ -5,43 +5,43 @@ import { useState } from 'react'
 
 const Team = [
   {
-    image: "/placeholder.svg?height=200&width=200",
-    name: "HAZARD",
+    image: "/TeamFinal/0xDinu.png",
+    name: "0xDinu",
+    role: "Senior Front-end Dev."
+  },
+  {
+    image: "/TeamFinal/0xMilitant.png",
+    name: "0xMilitant",
+    role: "Game Developer"
+  },
+  {
+    image: "/TeamFinal/0xUgly.png",
+    name: "0xUgly",
+    role: "Co-Founder"
+  },
+  {
+    image: "/TeamFinal/David.png",
+    name: "David",
+    role: "Smart Contract Dev."
+  },
+  {
+    image: "/TeamFinal/Deepanshu.png",
+    name: "Deepanshu",
+    role: "Web Developer"
+  },
+  {
+    image: "/TeamFinal/Hazard.png",
+    name: "Hazard",
     role: "Artist"
   },
   {
-    image: "/placeholder.svg?height=200&width=200",
-    name: "Deep",
-    role: "dev"
+    image: "/TeamFinal/RiseBoi.png",
+    name: "RiseBoi",
+    role: "Comms & Community"
   },
   {
-    image: "/placeholder.svg?height=200&width=200",
-    name: "HAZARD",
-    role: "Artist"
-  },
-  {
-    image: "/placeholder.svg?height=200&width=200",
-    name: "HAZARD",
-    role: "Artist"
-  },
-  {
-    image: "/placeholder.svg?height=200&width=200",
-    name: "HAZARD",
-    role: "Artist"
-  },
-  {
-    image: "/placeholder.svg?height=200&width=200",
-    name: "HAZARD",
-    role: "Artist"
-  },
-  {
-    image: "/placeholder.svg?height=200&width=200",
-    name: "HAZARD",
-    role: "Artist"
-  },
-  {
-    image: "/placeholder.svg?height=200&width=200",
-    name: "HAZARD",
+    image: "/TeamFinal/Yatin.png",
+    name: "Yatin",
     role: "Artist"
   },
 ]
