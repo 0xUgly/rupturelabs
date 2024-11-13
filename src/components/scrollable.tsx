@@ -56,7 +56,7 @@ const RoadmapComponent = () => {
 
             <Image 
             className='scale-[1.9]'
-              src="/shapes/vector 5 1.png " 
+              src="/shapes/rotatingwheel.png " 
               alt="Decorative rotating shape" 
               height={1923} 
               width={1506} 
@@ -66,7 +66,7 @@ const RoadmapComponent = () => {
 
         <div className="flex-1 px-4 lg:px-0 lg:ml-20" ref={contentRef}>
           <div 
-            className={`bg-white z-10 w-full ${isSticky ? 'fixed top-0 right-0 left-0 lg:left-1/4 px-4 lg:px-0 lg:ml-20' : ''}`}
+            className={`bg-white z-10 w-full`}
           >
             <h1 className="font-babes text-black text-[48px] sm:text-[72px] lg:text-[115px]">ROADMAP</h1>
           </div>
