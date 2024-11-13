@@ -6,15 +6,15 @@ import Draggable from 'react-draggable'
 function Main() {
   const [Showdiv, SetShowdiv] = useState(true)
   return (
-    <div className='h-screen w-full overflow-hidden relative z-0 bg-white'>
+    <div className="h-screen w-full overflow-hidden bg-[url('/bg/patternbg.png')] bg-cover bg-center relative z-0">
         <div className='h-full w-full flex items-center justify-center'>
         {Showdiv && (
           <Draggable>
-          <div className='bg-white z-30 border-2 border-black  h-[241px] w-[586px] absolute flex items-center justify-evenly p-4'>
+          <div className='bg-white z-30 border-2 border-black  lg:h-[241px] lg:w-[586px] h-[240px] m-2 absolute flex items-center justify-evenly p-4'>
             <div>
             <Image
             className=''
-            src='/logo/black.png'
+            src='/logo/Blacklogo.png'
             alt=''
             height={131}
             width={94}
@@ -47,13 +47,7 @@ function Main() {
           </div>
           </Draggable>
         )}
-            <Image
-            className='z-0'
-            src='/bg/6725513 2.png'
-            alt=''
-            height={1000}
-            width={1920}
-            />
+           
         </div>
         
     </div>

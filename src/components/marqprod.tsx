@@ -10,13 +10,11 @@ const discImages = [
   "/cd/CD_cosmicLeap.png",
   "/cd/Cd_ZooksQuest2 1.png",
   "/cd/Cd_TrailBlazer.png",
-
-  
 ]
 
 export function GameDiscMarquee() {
   return (
-    <div className="relative h-[260px] w-full overflow-hidden bg-transparent">
+    <div className="relative h-[260px] w-full overflow-x-hidden bg-transparent">
       <Marquee 
         pauseOnHover 
         className="[--duration:30s] [--gap:2rem]"
