@@ -6,7 +6,7 @@ import Draggable from 'react-draggable'
 function Main() {
   const [Showdiv, SetShowdiv] = useState(true)
   return (
-    <div className="h-screen w-full overflow-hidden bg-[url('/bg/team.gif')] bg-cover  bg-center relative z-0 ">
+    <div className="h-screen w-full overflow-hidden bg-[url('/bg/patternbg.png')] bg-cover  bg-center relative z-0 ">
         <div className='h-full w-full flex items-center justify-center'>
         {Showdiv && (
           <Draggable>
