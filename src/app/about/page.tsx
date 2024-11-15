@@ -110,28 +110,106 @@ import Component from '@/components/scrollable'
         </div>
 
         <div className="relative w-full min-h-screen overflow-hidden px-4 py-8 lg:p-24">
+          <div className='absolute top-0 left-0'>
+          <Image 
+              src="/shapes/partnershape.png" 
+              alt="Taiko Logo" 
+              
+              width={649} 
+              height={345} 
+              className="rounded-md"
+            />
+          </div>
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         transition={{ opacity: { duration: 1.5 }, ease: "easeOut", type: "spring", stiffness: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
-        className="mb-8 lg:mb-0 lg:absolute lg:top-24 lg:left-24"
+        className="mb-8 lg:mb-0 lg:absolute lg:bottom-48 lg:left-24"
       >
         <h1 className="text-5xl lg:text-[105px] font-bold leading-tight">
           <span className="block">OUR</span>
           <span className="block">PARTNER</span>
         </h1>
       </motion.div>
-      <div className="mt-12 lg:mt-0 lg:absolute lg:top-[220px] lg:left-[500px]">
+      <div className="mt-12 lg:mt-0 lg:absolute lg:bottom-[350px] lg:left-[300px]">
         <div className="grid grid-cols-2 gap-4 lg:flex lg:flex-row lg:gap-10">
-          {[60, -30, 80, 45].map((rotate, index) => (
-            <motion.div
-              key={index}
-              initial={{ x: 50, rotate, scale: 1.2 }}
-              transition={{ duration: 0.8, ease: "easeOut", type: "spring", stiffness: 100 }}
-              whileInView={{ x: 0, rotate: rotate / 20, scale: 1 }}
-              className="h-36 w-full lg:h-[230px] lg:w-[200px] bg-black rounded-xl shadow-lg"
+        <motion.div
+            initial={{ x: 50, rotate: 60, scale: 1.2 }}
+            transition={{ duration: 0.8, ease: "easeOut", type: "spring", stiffness: 100 }}
+            whileInView={{ x: 0, rotate: 60 / 20, scale: 1 }}
+            className="relative h-36 w-full lg:h-[230px] lg:w-[200px] bg-black rounded-xl shadow-lg overflow-hidden flex items-center justify-center"
+          >
+             <Image 
+              src="/partners/taiko.png" 
+              alt="Taiko Logo" 
+              layout="intrinsic" 
+              width={150} 
+              height={138} 
+              className="rounded-md"
             />
-          ))}
+            <div className="absolute bottom-0 w-full bg-black/60 text-white p-2 text-center">
+              Taiko
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ x: 50, rotate: -30, scale: 1.2 }}
+            transition={{ duration: 0.8, ease: "easeOut", type: "spring", stiffness: 100 }}
+            whileInView={{ x: 0, rotate: -30 / 20, scale: 1 }}
+            className="relative h-36 w-full lg:h-[230px] lg:w-[200px] bg-black rounded-xl shadow-lg overflow-hidden flex items-center justify-center"
+          >
+            
+            <Image 
+              src="/partners/Vector.png" 
+              alt="Taiko Logo" 
+              layout="intrinsic" 
+              width={166} 
+              height={104} 
+              className="rounded-md"
+            />           
+            <div className="absolute bottom-0 w-full bg-black/60 text-white p-2 text-center">
+              Third-web
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ x: 50, rotate: 80, scale: 1.2 }}
+            transition={{ duration: 0.8, ease: "easeOut", type: "spring", stiffness: 100 }}
+            whileInView={{ x: 0, rotate: 80 / 20, scale: 1 }}
+            className="relative h-36 w-full lg:h-[230px] lg:w-[200px] bg-black rounded-xl shadow-lg overflow-hidden flex items-center justify-center"
+          >
+            <Image 
+            
+              src="/partners/zkcandy2.png" 
+              alt="Taiko Logo" 
+              layout="intrinsic" 
+              width={163} 
+              height={155} 
+              className="rounded-xl bg-white"
+            />
+            <div className="absolute bottom-0 w-full bg-black/60 text-white p-2 text-center">
+              Binance
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ x: 50, rotate: 45, scale: 1.2 }}
+            transition={{ duration: 0.8, ease: "easeOut", type: "spring", stiffness: 100 }}
+            whileInView={{ x: 0, rotate: 45 / 20, scale: 1 }}
+            className="relative h-36 w-full lg:h-[230px] lg:w-[200px] bg-black rounded-xl shadow-lg overflow-hidden flex items-center justify-center"
+          >
+            <Image 
+              src="/partners/zkcandy1.png" 
+              alt="Taiko Logo" 
+              layout="intrinsic" 
+              width={151} 
+              height={101} 
+              className="rounded-md"
+            />
+            <div className="absolute bottom-0 w-full bg-black/60 text-white p-2 text-center">
+              ZK Candy
+            </div>
+          </motion.div>
         </div>
       </div>
     </div>

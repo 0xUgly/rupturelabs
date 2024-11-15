@@ -51,7 +51,7 @@ const RoadmapComponent = () => {
         <div className="w-full lg:w-1/4 relative flex items-center">
           <motion.div 
             style={{ rotate }}
-            className="absolute  left-0 z-30 hidden lg:block"
+            className="absolute  left-[-55%]  z-30 hidden lg:block"
           >
 
             <Image 
@@ -75,25 +75,25 @@ const RoadmapComponent = () => {
 
           <div className="pb-24">
             <div className="flex flex-col gap-8">
-              <RoadmapItem date="02 2024" title="LAUNCH OF MAIN PC GAME" />
+              <RoadmapItem date="Q2 2024" title="LAUNCH OF MAIN PC GAME" />
               <RoadmapItem 
-                date="03 2024" 
+                date="Q3 2024" 
                 title="Release of the first batch WebGL mini-games and Android game" 
               />
               <RoadmapItem 
-                date="04 2024" 
+                date="Q4 2024" 
                 title="Integration with additional blockchain networks" 
               />
               <RoadmapItem 
-                date="04 2024" 
+                date="Q4 2024" 
                 title="Expansion of Telegram games using telegram bots and mini apps" 
               />
               <RoadmapItem 
-                date="05 2024" 
+                date="Q5 2024" 
                 title="Launch of multiplayer features" 
               />
               <RoadmapItem 
-                date="06 2024" 
+                date="Q6 2024" 
                 title="Introduction of in-game marketplace" 
               />
             </div>
