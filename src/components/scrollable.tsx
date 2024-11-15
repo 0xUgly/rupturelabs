@@ -58,8 +58,8 @@ const RoadmapComponent = () => {
             className='h-full w-full'
               src="/wheelshape/wheel.png " 
               alt="Decorative rotating shape" 
-              height={1923} 
-              width={1506} 
+              height={1000} 
+              width={1000} 
             />
           </motion.div>
         </div>
