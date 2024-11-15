@@ -2,12 +2,24 @@
 
 import Image from 'next/image'
 import React, { useState, useRef, useEffect } from 'react'
+import SpinningGlowingCircle from '@/components/glowingircle'
 
 const videos = [
-  '/Tv/Tv=escape.mp4',
- 
-  
+  '/video/BNBCityTV.mp4',
+  '/video/EscapeThepitTV.mp4',
+  '/video/KromaGame.mp4',
+  '/video/TiltedTV.mp4',
+  '/video/zookQuest.mp4',
 ]
+
+const titles = [
+  'BNB CITY',
+  'ESCAPE THE PIT',
+  'KROMA GAME',
+  'TILTED TAP',
+  'ZOOK QUEST',
+]
+
 export default function Component() {
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -24,19 +36,21 @@ export default function Component() {
   }, [currentVideoIndex])
 
   return (
-    <div className='h-screen w-full flex items-center justify-center'>
-      <div className='relative w-[600px] h-[600px]'>
-        <video
-          ref={videoRef}
-          className='absolute top-0 left-0 w-full h-full object-cover z-0'
-          key={currentVideoIndex}
-          muted
-          loop
-          playsInline
-        >
-          <source src={videos[currentVideoIndex]} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+    <div className='h-screen w-full flex flex-col items-center justify-start'>
+      <div className='relative w-[620px] h-[620px]'>
+        <div className="absolute top-[135px] left-[70px] z-0">
+          <video
+            ref={videoRef}
+            className="w-[365px] h-full"
+            key={currentVideoIndex}
+            muted
+            loop
+            playsInline
+          >
+            <source src={videos[currentVideoIndex]} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
         <Image
           src='/Tv/TV2.webp'
           alt='TV Frame'
@@ -45,9 +59,10 @@ export default function Component() {
           className='z-10 pointer-events-none'
         />
         <div 
-          className='absolute top-[20%] right-[12%] cursor-pointer z-20'
+          className='absolute top-[24%] right-[12%] cursor-pointer z-20'
           onClick={handleKnobClick}
         >
+          <SpinningGlowingCircle/>
           <Image
             src='/Tv/KnobFinal.webp'
             alt='TV Knob'
@@ -55,6 +70,15 @@ export default function Component() {
             height={70}
           />
         </div>
+      </div>
+      <div 
+        className="mt-1 text-[128px] font-babes  tracking-wider text-center transition-opacity duration-300"
+        style={{
+          opacity: 1,
+          textShadow: '0 0 10px rgba(255, 255, 255, 0.5)'
+        }}
+      >
+        {titles[currentVideoIndex]}
       </div>
     </div>
   )

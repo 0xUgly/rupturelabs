@@ -6,6 +6,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 import { motion } from "framer-motion"
 import { GameDiscMarquee } from '@/components/marqprod';
 import Tv from '@/components/tv';
+import { SdMarquee } from '@/components/sdcardmarq';
 function Products() {
   useEffect(() => {
     const locomotiveScroll = new LocomotiveScroll();
@@ -67,6 +68,7 @@ function Products() {
       </div>
 
       <div>
+      <SdMarquee/>
         <Tv/>
       </div>
 

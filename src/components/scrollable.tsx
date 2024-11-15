@@ -78,7 +78,7 @@ const RoadmapComponent = () => {
               <RoadmapItem date="Q2 2024" title="LAUNCH OF MAIN PC GAME" />
               <RoadmapItem 
                 date="Q3 2024" 
-                title="Release of the first batch WebGL mini-games and Android game" 
+                title="Release of the first batchWebGL mini-games and Android game" 
               />
               <RoadmapItem 
                 date="Q4 2024" 
@@ -90,11 +90,7 @@ const RoadmapComponent = () => {
               />
               <RoadmapItem 
                 date="Q5 2024" 
-                title="Launch of multiplayer features" 
-              />
-              <RoadmapItem 
-                date="Q6 2024" 
-                title="Introduction of in-game marketplace" 
+                title="Launch of mobile versions, macOS and console games" 
               />
             </div>
           </div>
