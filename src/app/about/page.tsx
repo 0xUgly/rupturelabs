@@ -81,9 +81,9 @@ import Component from '@/components/scrollable'
       < ImageMarqueeDemo />
   </div>
   <div className='h-screen text-black font-babes z-10 relative'>
-  <div className='right-0 top-0 w-[700px] z-10 transform scale-[1] absolute'>
+  <div className='right-0 top-0 w-[700px] z-0 transform scale-[1] absolute'>
             <Image
-            className='  '
+            className='lg:opacity-100 opacity-0  '
             src='/shapes/croppedpartner.png'
             alt=''
             height={379}
@@ -110,23 +110,23 @@ import Component from '@/components/scrollable'
         </div>
 
         <div className="relative w-full min-h-screen overflow-hidden px-4 py-8 lg:p-24">
-          <div className='absolute top-0 left-0'>
+          <div className='absolute z-10 top-0 left-0'>
           <Image 
               src="/shapes/partnershape.png" 
               alt="Taiko Logo" 
               
               width={649} 
               height={345} 
-              className="rounded-md"
+              className="rounded-md lg:opacity-100 opacity-0 "
             />
           </div>
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         transition={{ opacity: { duration: 1.5 }, ease: "easeOut", type: "spring", stiffness: 100 }}
         whileInView={{ opacity: 1, x: 0 }}
-        className="mb-8 lg:mb-0 lg:absolute lg:bottom-48 lg:left-24"
+        className="mb-8 lg:mb-0 lg:absolute lg:bottom-48 z-10 lg:left-24"
       >
-        <h1 className="text-5xl lg:text-[105px] font-bold leading-tight">
+        <h1 className="text-5xl lg:text-[105px] z-10 font-bold leading-tight">
           <span className="block">OUR</span>
           <span className="block">PARTNER</span>
         </h1>
