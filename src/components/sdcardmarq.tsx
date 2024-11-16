@@ -33,17 +33,7 @@ export function SdMarquee() {
           </div>
         ))}
         {/* Duplicate the discs to ensure continuous flow */}
-        {SDImages.map((image, index) => (
-          <div key={`duplicate-${index}`} className="relative p-4 w-[260px] h-[260px] mx-4 transition-transform hover:scale-105">
-            <Image
-              src={image}
-              alt=""
-              width={280}  // Adjust width to fit within the container
-              height={280} // Adjust height to match the width for consistency
-              className="object-contain" // Ensures image fits within the box without overflow
-            />
-          </div>
-        ))}
+       
       </Marquee>
       
       {/* Gradient overlays */}
