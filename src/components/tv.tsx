@@ -70,6 +70,13 @@ export default function Component() {
             height={70}
           />
         </div>
+        <div 
+          className='absolute TEXT-[#959595] top-[36%] text-[11px] right-[13%] cursor-pointer z-20'
+          
+        >
+          
+          PLAY/NEXT
+        </div>
       </div>
       <div 
         className="mt-1 text-[128px] font-babes  tracking-wider text-center transition-opacity duration-300"

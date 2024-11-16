@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { FaTwitter, FaInstagram, FaDiscord, FaBars, FaTimes } from 'react-icons/fa';
-
+import Link from 'next/link';
 type ButtonName = 'home' | 'about' | 'products' | 'team';
 
 export default function Footer() {
@@ -111,8 +111,8 @@ export default function Footer() {
 
                 {/* Social Icons */}
                 <div className='flex items-center gap-3'>
-                    <div className='cursor-pointer'><FaTwitter size={25} className="text-white" /></div>
-                    <div className='cursor-pointer'><FaDiscord size={25} className="text-white" /></div>
+                    <div className='cursor-pointer'><Link  href='https://x.com/rupturelabs?s=21' target="_blank"><FaTwitter size={25} className="text-white" /></Link></div>
+                    <div className='cursor-pointer'><Link href='https://discord.gg/h6BBSPggfB' target="_blank"><FaDiscord size={25} className="text-white" /></Link></div>
                     <div className='cursor-pointer'><FaInstagram size={25} className="text-white" /></div>
                 </div>
             </div>

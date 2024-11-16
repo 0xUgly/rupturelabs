@@ -7,6 +7,7 @@ import { motion } from "framer-motion"
 import { GameDiscMarquee } from '@/components/marqprod';
 import Tv from '@/components/tv';
 import { SdMarquee } from '@/components/sdcardmarq';
+import Link from 'next/link';
 function Products() {
   useEffect(() => {
     const locomotiveScroll = new LocomotiveScroll();
@@ -31,15 +32,18 @@ function Products() {
 
         <div className='w-full h-full flex-1 flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-0 px-4 lg:px-0'>
           <motion.div className='font-babes text-[64px] lg:text-[140px] text-center lg:w-1/4 lg:text-left'>EVM<br/> WARFARE</motion.div>
+          <Link href='https://evmwarfare.com/' target="_blank">
           <motion.div className='h-auto w-full lg:h-[800px] lg:w-[800px]'>
+            
             <Image
               className='w-full lg:w-[781px] h-auto lg:h-[671px]'
-              src='/cd/Group 1244831235.png'
+              src='/CDs/EVMcd.png'
               alt=''
               height={800}
               width={800}
             />
           </motion.div>
+          </Link>
           <motion.div className='font-raj text-[20px] lg:text-[32px] font-medium w-full lg:w-1/4 text-center lg:text-left'>First-Person Shooters PC Game : Fast paced action-packed game with blockchain-integrated features - EVM Warfare.</motion.div>
         </div>
       </div>
