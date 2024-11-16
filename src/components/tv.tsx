@@ -37,11 +37,11 @@ export default function Component() {
 
   return (
     <div className='h-screen w-full flex flex-col items-center justify-start'>
-      <div className='relative w-[620px] h-[620px]'>
-        <div className="absolute top-[135px] left-[70px] z-0">
+      <div className='relative lg:w-[620px] lg:h-[620px] h-[420px] w-[420px]'>
+        <div className="absolute lg:top-[135px] lg:left-[70px] top-[90px] left-[50px] z-0">
           <video
             ref={videoRef}
-            className="w-[365px] h-full"
+            className="lg:w-[365px] w-[240px] h-full"
             key={currentVideoIndex}
             muted
             loop
@@ -64,6 +64,7 @@ export default function Component() {
         >
           <SpinningGlowingCircle/>
           <Image
+          className='h-[50px] w-[50px] lg:h-[70px] lg:w-[70px]'
             src='/Tv/KnobFinal.webp'
             alt='TV Knob'
             width={70}
@@ -71,7 +72,7 @@ export default function Component() {
           />
         </div>
         <div 
-          className='absolute TEXT-[#959595] top-[36%] text-[11px] right-[13%] cursor-pointer z-20'
+          className='absolute text-[#959595] top-[36%] lg:text-[11px] text-[9px] right-[13%] cursor-pointer z-20'
           
         >
           
@@ -79,7 +80,7 @@ export default function Component() {
         </div>
       </div>
       <div 
-        className="mt-1 text-[128px] font-babes  tracking-wider text-center transition-opacity duration-300"
+        className="mt-1 lg:text-[128px] text-[80px] font-babes  tracking-wider text-center transition-opacity duration-300"
         style={{
           opacity: 1,
           textShadow: '0 0 10px rgba(255, 255, 255, 0.5)'
