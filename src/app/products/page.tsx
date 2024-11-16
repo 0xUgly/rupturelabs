@@ -30,7 +30,7 @@ function Products() {
         </motion.div>
 
         <div className='w-full h-full flex-1 flex flex-col lg:flex-row items-center justify-center gap-6 lg:gap-0 px-4 lg:px-0'>
-          <motion.div className='font-babes text-[64px] lg:text-[140px] text-center lg:text-left'>EVM<br/> WARFARE</motion.div>
+          <motion.div className='font-babes text-[64px] lg:text-[140px] text-center lg:w-1/4 lg:text-left'>EVM<br/> WARFARE</motion.div>
           <motion.div className='h-auto w-full lg:h-[800px] lg:w-[800px]'>
             <Image
               className='w-full lg:w-[781px] h-auto lg:h-[671px]'

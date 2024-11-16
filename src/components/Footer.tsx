@@ -26,7 +26,7 @@ export default function Footer() {
     };
 
     return (
-        <footer className='h-24 p-5 w-full fixed bottom-0 z-10 bg-black font-title text-xl'>
+        <footer className='h-24 p-5 w-full fixed bottom-0 z-30 bg-black font-title text-xl'>
             <div className='flex h-full w-full items-center justify-between'>
                 
                 {/* Toggle Icon for Small Screens */}

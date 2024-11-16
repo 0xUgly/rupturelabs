@@ -22,33 +22,32 @@ export function SdMarquee() {
         className="[--duration:30s] [--gap:2rem]"
       >
         {SDImages.map((image, index) => (
-          <div key={index} className="relative p-4 w-[280px] h-[280px] mx-4 flex items-center transition-transform hover:scale-105">
+          <div key={index} className="relative p-4 w-[260px] h-[260px] mx-4 flex items-center transition-transform hover:scale-105">
             <Image
               src={image}
               alt=""
-              width={330}
-              height={330}
-              className=""
+              width={280}  // Adjust width to fit within the container
+              height={280} // Adjust height to match the width for consistency
+              className="object-contain" // Ensures image fits within the box without overflow
             />
           </div>
         ))}
         {/* Duplicate the discs to ensure continuous flow */}
         {SDImages.map((image, index) => (
-          <div key={`duplicate-${index}`} className="relative p-4 w-[280px] h-[280px] mx-4 transition-transform hover:scale-105">
+          <div key={`duplicate-${index}`} className="relative p-4 w-[260px] h-[260px] mx-4 transition-transform hover:scale-105">
             <Image
               src={image}
               alt=""
-              width={330}
-              height={330}
-              className=""
+              width={280}  // Adjust width to fit within the container
+              height={280} // Adjust height to match the width for consistency
+              className="object-contain" // Ensures image fits within the box without overflow
             />
           </div>
         ))}
       </Marquee>
       
       {/* Gradient overlays */}
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black" />
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black" />
+      
     </div>
   )
 }
