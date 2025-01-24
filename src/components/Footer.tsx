@@ -5,23 +5,23 @@ import { usePathname, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { FaTwitter, FaInstagram, FaDiscord, FaBars, FaTimes } from 'react-icons/fa';
 import Link from 'next/link';
-type ButtonName = 'home' | 'about' | 'products' | 'team';
+type ButtonName =  'about' | 'products' | 'team';
 
 export default function Footer() {
     const router = useRouter();
     const pathname = usePathname();
-    const [activeButton, setActiveButton] = useState<ButtonName>('home');
+    const [activeButton, setActiveButton] = useState<ButtonName>('about');
     const [menuOpen, setMenuOpen] = useState(false); // Menu open state
-    const buttons: ButtonName[] = ['home', 'about', 'products', 'team'];
+    const buttons: ButtonName[] = [ 'about', 'products', 'team'];
 
     useEffect(() => {
-        const path = (pathname?.substring(1) || 'home') as ButtonName;
+        const path = (pathname?.substring(1) || 'about') as ButtonName;
         setActiveButton(path);
     }, [pathname]);
 
     const handleNavigation = (newButton: ButtonName) => {
         setActiveButton(newButton);
-        router.push(newButton === 'home' ? '/' : `/${newButton}`);
+        router.push(newButton === 'about' ? '/' : `/${newButton}`);
         setMenuOpen(false); // Close the menu after navigation
     };
 

@@ -26,6 +26,19 @@ import Component from '@/components/scrollable'
       width={2000}
     /> */}
   </div>
+  <div className='h-screen w-full bg-black  flex items-center justify-center'>
+  <motion.div 
+    initial={{ x: 0, rotate: 0, scale:1 }}
+    transition={{ duration: 0.8, ease: "easeOut", type: "spring", stiffness: 100 }}>
+  <Image 
+  src="/bg/home.png"
+  alt=""
+  width={900}  // Original width
+  height={900} // Original height
+  
+/>
+  </motion.div>
+  </div>
   <div className='flex flex-col items-center justify-center h-screen w-full gap-16'>
     <motion.div  >
     <Image
@@ -217,12 +230,12 @@ import Component from '@/components/scrollable'
 <div className='h-auto w-auto relative bg-white overflow-hidden'>
   <Component/>
   </div>
-  <div className='h-screen w-full bg-black'>
-      <div className='font-babes lg:text-[145px] text-[105px] pt-24'>STILL<br/> BUILDING!</div>
-      <div className='flex flex-col mt-24 items-end p-5 gap-1 h-full'>
+  <div className='h-screen flex flex-col items-center justify-center w-full bg-black'>
+      <div className='font-babes lg:text-[145px]  text-[105px] pt-24'>STILL BUILDING!</div>
+      <div className='absolute z-10 bottom-0 pb-24 flex flex-col items-center justify-center'>
         <div>
           <Image
-            src='/logo/finaleLOgo.png'
+            src='/logo/implinks.png'
             alt=''
             height={80}
             width={80}
