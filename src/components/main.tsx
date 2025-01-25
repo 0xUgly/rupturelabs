@@ -26,7 +26,7 @@ import Component from '@/components/scrollable'
       width={2000}
     /> */}
   </div>
-  <div className='h-screen w-full bg-black  flex items-center justify-center'>
+  <div className='relative h-screen w-full bg-black  flex  items-center justify-center'>
   <motion.div 
     initial={{ x: 0, rotate: 0, scale:1 }}
     transition={{ duration: 0.8, ease: "easeOut", type: "spring", stiffness: 100 }}>
@@ -38,6 +38,15 @@ import Component from '@/components/scrollable'
   
 />
   </motion.div>
+  <div className='absolute bottom-24 z-20'>
+  <Image 
+  src="/bg/scroll.png"
+  alt=""
+  width={220}  // Original width
+  height={69} // Original height
+  
+/>
+  </div>
   </div>
   <div className='flex flex-col items-center justify-center h-screen w-full gap-16'>
     <motion.div  >
@@ -102,7 +111,7 @@ import Component from '@/components/scrollable'
         whileInView={{ opacity: 1, x: 0 }}
         className=""
       >
-        <h1 className="text-5xl lg:text-[105px] z-10 font-bold leading-tight">OUR PARTNER</h1>
+        <h1 className="text-5xl lg:text-[105px] z-10  leading-tight font-babes">OUR PARTNER</h1>
       </motion.div>
       <div className="">
         <div className="grid grid-cols-2 gap-4 lg:flex lg:flex-row lg:gap-10">
@@ -177,7 +186,7 @@ import Component from '@/components/scrollable'
           </motion.div>
         </div>
       </div>
-    <div className='mt-4 p-4'>We collaborate with top-tier partners to push the boundaries of Web3 gaming. From blockchain innovators to gaming pioneers, our partners help us build immersive experiences powered by cutting-edge technology.</div>
+    <div className='mt-4 p-4 font-raj'>We collaborate with top-tier partners to push the boundaries of Web3 gaming. From blockchain innovators to gaming pioneers, our partners help us build immersive experiences powered by cutting-edge technology.</div>
     </div>
   </div>
 <div className='h-auto w-auto relative bg-white overflow-hidden'>
