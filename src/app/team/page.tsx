@@ -24,11 +24,11 @@ const Team = [
     name: "David",
     role: "Smart Contract Dev."
   },
-  {
-    image: "/TeamFinal/Deepanshu.png",
-    name: "Deepanshu",
-    role: "Web Developer"
-  },
+  // {
+  //   image: "/TeamFinal/Deepanshu.png",
+  //   name: "Deepanshu",
+  //   role: "Web Developer"
+  // },
   {
     image: "/TeamFinal/Hazard.png",
     name: "Hazard",
